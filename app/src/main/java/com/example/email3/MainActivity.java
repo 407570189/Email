@@ -48,9 +48,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     public void button(View view){
-        int n1=Integer.parseInt(n.getText().toString());
-        int p1=Integer.parseInt(p.getText().toString());
-        int w1=Integer.parseInt(w.getText().toString());
+        String str1=w.getText().toString();
+        String str2=p.getText().toString();
+        String str3=n.getText().toString();
+        String str4=e.getText().toString();
         if(w.length()<4) {
             picture.setVisibility(View.VISIBLE);
             picture3.setVisibility(View.GONE);
@@ -92,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
             new AlertDialog.Builder(MainActivity.this)
                     .setIcon(R.drawable.iconfinder_feel_good_41549)
                     .setTitle("註冊成功")
-                    .setMessage("名字:"+n1+"\n"+"帳號:"+w1+"\n"+"密碼:"+p1+"\n"+"welcome")
+                    .setMessage("名字:"+str3+"\n"+"帳號:"+str1+"\n"+"密碼:"+str2+"\n"+str4+"\n"+"welcome")
                     .setPositiveButton("ok", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
